@@ -212,9 +212,6 @@ p { margin: 0; }
   }
   [data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); transition-delay: .25s; }
   [data-tip]:hover::before, [data-tip]:focus-visible::before { opacity: 1; transform: translate(-50%, 0) rotate(45deg); transition-delay: .25s; }
-  /* The résumé button sits near the right edge: anchor its tooltip there so it never spills off-screen */
-  .nav__resume[data-tip]::after { left: auto; right: 0; transform: translateY(-4px); }
-  .nav__resume[data-tip]:hover::after, .nav__resume[data-tip]:focus-visible::after { transform: none; }
 }
 .nav__resume { gap: 6px; }
 .nav__resume svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
