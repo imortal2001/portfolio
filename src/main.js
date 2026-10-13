@@ -28,7 +28,7 @@ addEventListener('scroll', onScroll, { passive: true });
 requestAnimationFrame(onScroll);
 
 // Highlight the nav link for the last section whose top has passed the middle of the screen.
-const navLinks = $$('.nav__links a');
+const navLinks = $$('.nav__links a, .mobile-menu a:not(.btn)');
 const navTargets = ['work', 'skills', 'solved', 'process', 'about', 'experience', 'contact']
   .map((id) => document.getElementById(id)).filter(Boolean);
 let navRaf = 0;

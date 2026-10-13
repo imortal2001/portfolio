@@ -234,7 +234,18 @@ p { margin: 0; }
 .nav__burger[aria-expanded="true"] span:last-child { top: 20px; transform: rotate(-45deg); }
 .mobile-menu { display: grid; gap: 4px; padding: 8px var(--gutter) 24px; background: var(--bg); border-bottom: 1px solid var(--line); }
 .mobile-menu[hidden] { display: none; }
-.mobile-menu a:not(.btn) { padding: 14px 4px; font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--line); }
+.mobile-menu a:not(.btn) {
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 4px; font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; text-decoration: none;
+  border-bottom: 1px solid var(--line); transition: color .2s, padding-left .3s var(--ease);
+}
+/* Accent bar slides in on the left, arrow slides in on the right */
+.mobile-menu a:not(.btn)::before { content: ""; position: absolute; left: 0; top: 50%; width: 4px; height: 0; border-radius: 4px; background: var(--accent); transform: translateY(-50%); transition: height .3s var(--ease); }
+.mobile-menu a:not(.btn)::after { content: "→"; font-size: 1.1rem; color: var(--accent); opacity: 0; transform: translateX(-8px); transition: opacity .2s, transform .3s var(--ease); }
+.mobile-menu a:not(.btn):hover, .mobile-menu a:not(.btn):focus-visible, .mobile-menu a:not(.btn):active { color: var(--accent); padding-left: 16px; }
+.mobile-menu a.is-current { color: var(--accent); padding-left: 12px; }
+.mobile-menu a:not(.btn):hover::before, .mobile-menu a:not(.btn):focus-visible::before, .mobile-menu a:not(.btn):active::before, .mobile-menu a.is-current::before { height: 55%; }
+.mobile-menu a:not(.btn):hover::after, .mobile-menu a:not(.btn):focus-visible::after, .mobile-menu a:not(.btn):active::after { opacity: 1; transform: none; }
 .mobile-menu .btn { margin-top: 16px; }
 
 .brand, .nav__links a, .nav__actions .btn { white-space: nowrap; }
