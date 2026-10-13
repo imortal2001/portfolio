@@ -12,12 +12,27 @@
   <meta property="og:description" content="Web apps, mobile apps and games, designed, built and shipped end to end." />
   <meta property="og:url" content="https://louiejay.pages.dev/" />
   <meta property="og:image" content="https://louiejay.pages.dev/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Louie Jay — I build apps &amp; games people love to use" />
   <link rel="canonical" href="https://louiejay.pages.dev/" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://louiejay.pages.dev/og.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Louie Jay",
+      "url": "https://louiejay.pages.dev/",
+      "image": "https://louiejay.pages.dev/og.png",
+      "jobTitle": "Web Developer",
+      "worksFor": { "@type": "Organization", "name": "Forty Degrees Celsius, Inc.", "url": "https://fdc-inc.com" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Cebu", "addressCountry": "PH" },
+      "sameAs": ["https://github.com/imortal2001"],
+      "knowsAbout": ["PHP", "Laravel", "CakePHP", "Vue.js", "TypeScript", "React Native", "Next.js", "MySQL", "Game development"]
+    }
+  </script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/styles.css" />
   <script>
     // Apply the saved theme before first paint to avoid a flash.
@@ -31,7 +46,7 @@
   <!-- ============ NAV ============ -->
   <header class="nav" data-nav>
     <div class="nav__inner container">
-      <a class="brand" href="#top" aria-label="Louie Jay, back to top">
+      <a class="brand" href="#top">
         <span class="brand__mark" aria-hidden="true">LJ</span>
         <span class="brand__name">Louie Jay</span>
       </a>
@@ -40,6 +55,7 @@
         <a href="#skills">Skills</a>
         <a href="#solved">Problem solving</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
       </nav>
       <div class="nav__actions">
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
@@ -57,6 +73,7 @@
       <a href="#skills">Skills</a>
       <a href="#solved">Problem solving</a>
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#contact" class="btn btn--primary">Hire me</a>
     </div>
   </header>
@@ -73,16 +90,17 @@
             <br />people <em>love</em> to&nbsp;use.
           </h1>
           <p class="hero__lede" data-anim="3">
-            Hi, I’m <strong>Louie Jay</strong> — a full-stack developer from the Philippines. I take ideas from
-            first sketch to a live product: interface, backend, database, deployment and app-store build.
+            Hi, I’m <strong>Louie Jay</strong> — a full-stack developer in Cebu, Philippines, currently building
+            NativeCamp at Forty Degrees Celsius. I take ideas from first sketch to a live product: interface, backend,
+            database, deployment and app-store build.
           </p>
           <div class="hero__ctas" data-anim="4">
             <a class="btn btn--primary btn--lg magnetic" href="#work">See my work <span aria-hidden="true">→</span></a>
             <a class="btn btn--ghost btn--lg magnetic" href="#contact">Start a project</a>
           </div>
           <dl class="stats" data-anim="5">
-            <div><dt><span data-count="4">4</span></dt><dd>products built end&nbsp;to&nbsp;end</dd></div>
-            <div><dt><span data-count="4">4</span></dt><dd>live — try every one today</dd></div>
+            <div><dt><span data-count="4">4</span></dt><dd>products built &amp; live</dd></div>
+            <div><dt><span data-count="3">3</span></dt><dd>platforms: web, Android &amp; iOS</dd></div>
             <div><dt><span data-count="5">5</span></dt><dd>languages shipped in one game</dd></div>
           </dl>
         </div>
@@ -90,13 +108,13 @@
         <div class="stage" data-parallax aria-hidden="true">
           <div class="stage__browser frame-browser float float--b" data-depth="0.6">
             <div class="frame-browser__bar"><i></i><i></i><i></i><span>adrift — three.js</span></div>
-            <img src="/images/adrift-ocean.webp" alt="" width="1440" height="900" />
+            <img src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="" width="1440" height="900" />
           </div>
           <div class="stage__phone stage__phone--a frame-phone float float--a" data-depth="1.2">
-            <img src="/images/isla-farm.webp" alt="" width="780" height="1688" />
+            <img src="/images/isla-farm.webp" srcset="/images/isla-farm-400.webp 400w, /images/isla-farm.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="" width="780" height="1688" />
           </div>
           <div class="stage__phone stage__phone--b frame-phone float float--c" data-depth="0.9">
-            <img src="/images/kusina-landing.webp" alt="" width="780" height="1688" />
+            <img src="/images/kusina-landing.webp" srcset="/images/kusina-landing-400.webp 400w, /images/kusina-landing.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="" width="780" height="1688" />
           </div>
           <div class="stage__chip stage__chip--1 float float--c" data-depth="1.6"><span class="dot dot--green"></span>Synced playback · ±1.5s</div>
           <div class="stage__chip stage__chip--2 float float--a" data-depth="1.4">★ 42-day story season</div>
@@ -120,10 +138,10 @@
           <p class="section__lede">Every project here was designed, built and deployed by me — from the database schema to the last animation.</p>
         </header>
 
-        <div class="filters reveal" role="tablist" aria-label="Filter projects">
-          <button class="filter is-active" role="tab" aria-selected="true" data-filter="all">All <sup>4</sup></button>
-          <button class="filter" role="tab" aria-selected="false" data-filter="app">Apps <sup>2</sup></button>
-          <button class="filter" role="tab" aria-selected="false" data-filter="game">Games <sup>2</sup></button>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter is-active" type="button" aria-pressed="true" data-filter="all">All <sup>4</sup></button>
+          <button class="filter" type="button" aria-pressed="false" data-filter="app">Apps <sup>2</sup></button>
+          <button class="filter" type="button" aria-pressed="false" data-filter="game">Games <sup>2</sup></button>
         </div>
 
         <div class="projects">
@@ -132,8 +150,8 @@
             <div class="bunting" aria-hidden="true"></div>
             <div class="project__media">
               <div class="project__shots">
-                <div class="frame-phone tilt"><img src="/images/isla-farm.webp" alt="Isla Lola farm with crops, a nipa hut and the player" width="780" height="1688" loading="lazy" /></div>
-                <div class="frame-phone tilt"><img src="/images/isla-fiesta.webp" alt="Isla Lola town fiesta celebration scene" width="780" height="1688" loading="lazy" /></div>
+                <div class="frame-phone tilt"><img src="/images/isla-farm.webp" srcset="/images/isla-farm-400.webp 400w, /images/isla-farm.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Isla Lola farm with crops, a nipa hut and the player" width="780" height="1688" loading="lazy" /></div>
+                <div class="frame-phone tilt"><img src="/images/isla-fiesta.webp" srcset="/images/isla-fiesta-400.webp 400w, /images/isla-fiesta.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Isla Lola town fiesta celebration scene" width="780" height="1688" loading="lazy" /></div>
               </div>
             </div>
             <div class="project__body">
@@ -160,9 +178,9 @@
             <div class="project__media">
               <div class="frame-browser project__desk tilt">
                 <div class="frame-browser__bar"><i></i><i></i><i></i><span>kusinalink.expo.app</span></div>
-                <img src="/images/kusina-desktop.webp" alt="KusinaLink landing page on desktop showing today's menu" width="1440" height="900" loading="lazy" />
+                <img src="/images/kusina-desktop.webp" srcset="/images/kusina-desktop-960.webp 960w, /images/kusina-desktop.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="KusinaLink landing page on desktop showing today's menu" width="1440" height="900" loading="lazy" />
               </div>
-              <div class="frame-phone project__phone tilt"><img src="/images/kusina-menu.webp" alt="KusinaLink daily menu on a phone with Add buttons" width="780" height="1688" loading="lazy" /></div>
+              <div class="frame-phone project__phone tilt"><img src="/images/kusina-menu.webp" srcset="/images/kusina-menu-400.webp 400w, /images/kusina-menu.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="KusinaLink daily menu on a phone with Add buttons" width="780" height="1688" loading="lazy" /></div>
             </div>
             <div class="project__body">
               <p class="project__meta"><span>02</span> Ordering platform · 2026 · Restaurant client</p>
@@ -188,9 +206,9 @@
             <div class="project__media project__media--jammr">
               <div class="frame-browser project__desk tilt">
                 <div class="frame-browser__bar"><i></i><i></i><i></i><span>jammr — weekend-crew</span></div>
-                <img src="/images/jammr-chat.webp" alt="Jammr group chat on desktop with message bubbles and a Start a jam button" width="1440" height="900" loading="lazy" />
+                <img src="/images/jammr-chat.webp" srcset="/images/jammr-chat-960.webp 960w, /images/jammr-chat.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Jammr group chat on desktop with message bubbles and a Start a jam button" width="1440" height="900" loading="lazy" />
               </div>
-              <div class="frame-phone project__phone tilt"><img src="/images/jammr-mobile.webp" alt="Jammr chat on a phone" width="780" height="1688" loading="lazy" /></div>
+              <div class="frame-phone project__phone tilt"><img src="/images/jammr-mobile.webp" srcset="/images/jammr-mobile-400.webp 400w, /images/jammr-mobile.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Jammr chat on a phone" width="780" height="1688" loading="lazy" /></div>
             </div>
             <div class="project__body">
               <p class="project__meta"><span>03</span> Realtime web &amp; mobile app · 2026 · Solo</p>
@@ -216,7 +234,7 @@
             <div class="project__media">
               <div class="frame-browser project__wide tilt">
                 <div class="frame-browser__bar"><i></i><i></i><i></i><span>adrift-gamma.vercel.app</span></div>
-                <img src="/images/adrift-ocean.webp" alt="Adrift: first-person view of the open ocean with floating debris and a forested shore" width="1440" height="900" loading="lazy" />
+                <img src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Adrift: first-person view of the open ocean with floating debris and a forested shore" width="1440" height="900" loading="lazy" />
               </div>
             </div>
             <div class="project__body">
@@ -356,7 +374,7 @@
       <div class="container about">
         <div class="about__art reveal" aria-hidden="true">
           <div class="monogram"><span>LJ</span></div>
-          <div class="about__sticker">Made in the 🇵🇭</div>
+          <div class="about__sticker">Made in the Philippines <svg class="flag" viewBox="0 0 6 3" aria-hidden="true"><path fill="#0038A8" d="M0 0h6v1.5H0z"/><path fill="#CE1126" d="M0 1.5h6V3H0z"/><path fill="#fff" d="M0 0l2.6 1.5L0 3z"/><circle cx=".85" cy="1.5" r=".32" fill="#FCD116"/></svg></div>
         </div>
         <div class="about__copy">
           <p class="eyebrow reveal"><span>05</span> About me</p>
@@ -366,6 +384,7 @@
             <p>I love the whole journey: shaping a fuzzy idea, choosing the right tools, sweating the small interactions and getting it into people’s hands. I write things down, explain trade-offs plainly and finish what I start.</p>
           </div>
 
+          <div class="experience" id="experience">
           <h3 class="about__sub reveal">Experience</h3>
           <ol class="timeline reveal">
             <li>
@@ -404,6 +423,7 @@
             </li>
             -->
           </ol>
+          </div>
 
           <ul class="facts reveal">
             <li><span>Based in</span>Cebu, Philippines · GMT+8</li>
@@ -535,12 +555,12 @@
       </div>
     </div>
     <div class="case__gallery">
-      <img src="/images/isla-farm.webp" alt="Farm plots with growing crops" loading="lazy" />
-      <img src="/images/isla-talk.webp" alt="Talking to a villager" loading="lazy" />
-      <img src="/images/isla-caught.webp" alt="Catching a fish at the pier" loading="lazy" />
-      <img src="/images/isla-cook.webp" alt="Cooking a recipe" loading="lazy" />
-      <img src="/images/isla-plaza.webp" alt="The town plaza" loading="lazy" />
-      <img src="/images/isla-memory.webp" alt="One of Lola's memories" loading="lazy" />
+      <img src="/images/isla-farm.webp" srcset="/images/isla-farm-400.webp 400w, /images/isla-farm.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Farm plots with growing crops" loading="lazy" />
+      <img src="/images/isla-talk.webp" srcset="/images/isla-talk-400.webp 400w, /images/isla-talk.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Talking to a villager" loading="lazy" />
+      <img src="/images/isla-caught.webp" srcset="/images/isla-caught-400.webp 400w, /images/isla-caught.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Catching a fish at the pier" loading="lazy" />
+      <img src="/images/isla-cook.webp" srcset="/images/isla-cook-400.webp 400w, /images/isla-cook.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Cooking a recipe" loading="lazy" />
+      <img src="/images/isla-plaza.webp" srcset="/images/isla-plaza-400.webp 400w, /images/isla-plaza.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="The town plaza" loading="lazy" />
+      <img src="/images/isla-memory.webp" srcset="/images/isla-memory-400.webp 400w, /images/isla-memory.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="One of Lola's memories" loading="lazy" />
     </div>
   </template>
 
@@ -549,7 +569,7 @@
       <p class="case__kicker">Ordering platform · 2026 · Restaurant client</p>
       <h2 id="case-title">KusinaLink</h2>
       <p>Daily-menu ordering for a single restaurant — in daily use by Tasty Sacy.</p>
-      <img class="case__banner" src="/images/kusina-desktop.webp" alt="KusinaLink landing page on desktop" width="1440" height="900" />
+      <img class="case__banner" src="/images/kusina-desktop.webp" srcset="/images/kusina-desktop-960.webp 960w, /images/kusina-desktop.webp 1440w" sizes="(max-width: 1040px) 96vw, 1000px" alt="KusinaLink landing page on desktop" width="1440" height="900" />
     </header>
     <div class="case__grid">
       <aside class="case__facts">
@@ -580,8 +600,8 @@
       </div>
     </div>
     <div class="case__gallery">
-      <img src="/images/kusina-landing.webp" alt="Mobile landing page with today's menu" loading="lazy" />
-      <img src="/images/kusina-menu.webp" alt="Mobile menu with Add buttons" loading="lazy" />
+      <img src="/images/kusina-landing.webp" srcset="/images/kusina-landing-400.webp 400w, /images/kusina-landing.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Mobile landing page with today's menu" loading="lazy" />
+      <img src="/images/kusina-menu.webp" srcset="/images/kusina-menu-400.webp 400w, /images/kusina-menu.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Mobile menu with Add buttons" loading="lazy" />
     </div>
   </template>
 
@@ -590,7 +610,7 @@
       <p class="case__kicker">Realtime web &amp; mobile app · 2026</p>
       <h2 id="case-title">Jammr</h2>
       <p>A group chat where friends listen to the same music at the same moment.</p>
-      <img class="case__banner" src="/images/jammr-chat.webp" alt="Jammr chat on desktop" width="1440" height="900" />
+      <img class="case__banner" src="/images/jammr-chat.webp" srcset="/images/jammr-chat-960.webp 960w, /images/jammr-chat.webp 1440w" sizes="(max-width: 1040px) 96vw, 1000px" alt="Jammr chat on desktop" width="1440" height="900" />
     </header>
     <div class="case__grid">
       <aside class="case__facts">
@@ -620,8 +640,8 @@
       </div>
     </div>
     <div class="case__gallery">
-      <img class="wide" src="/images/jammr-chat.webp" alt="Desktop chat" loading="lazy" />
-      <img src="/images/jammr-mobile.webp" alt="Mobile chat" loading="lazy" />
+      <img class="wide" src="/images/jammr-chat.webp" srcset="/images/jammr-chat-960.webp 960w, /images/jammr-chat.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Desktop chat" loading="lazy" />
+      <img src="/images/jammr-mobile.webp" srcset="/images/jammr-mobile-400.webp 400w, /images/jammr-mobile.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Mobile chat" loading="lazy" />
     </div>
   </template>
 
@@ -630,7 +650,7 @@
       <p class="case__kicker">3D browser game · 2026 · Prototype</p>
       <h2 id="case-title">Adrift</h2>
       <p>Ocean raft survival in the browser — with dinosaurs on the horizon.</p>
-      <img class="case__banner" src="/images/adrift-ocean.webp" alt="Adrift ocean view" width="1440" height="900" />
+      <img class="case__banner" src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 1040px) 96vw, 1000px" alt="Adrift ocean view" width="1440" height="900" />
     </header>
     <div class="case__grid">
       <aside class="case__facts">
@@ -659,8 +679,8 @@
       </div>
     </div>
     <div class="case__gallery case__gallery--wide">
-      <img src="/images/adrift-ocean.webp" alt="Open ocean with debris and shore" loading="lazy" />
-      <img src="/images/adrift-title.webp" alt="Adrift title and controls screen" loading="lazy" />
+      <img src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Open ocean with debris and shore" loading="lazy" />
+      <img src="/images/adrift-title.webp" srcset="/images/adrift-title-960.webp 960w, /images/adrift-title.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Adrift title and controls screen" loading="lazy" />
     </div>
   </template>
 

@@ -25,19 +25,21 @@ const onScroll = () => {
   root.style.setProperty('--progress', max > 0 ? (y / max).toFixed(4) : 0);
 };
 addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+requestAnimationFrame(onScroll);
 
+// Highlight the nav link for the last section whose top has passed the middle of the screen.
 const navLinks = $$('.nav__links a');
-const sectionObserver = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (!e.isIntersecting) continue;
-    navLinks.forEach((a) => a.classList.toggle('is-current', a.getAttribute('href') === `#${e.target.id}`));
-  }
-}, { rootMargin: '-45% 0px -50% 0px' });
-['work', 'skills', 'solved', 'process', 'about', 'contact'].forEach((id) => {
-  const el = document.getElementById(id);
-  if (el) sectionObserver.observe(el);
-});
+const navTargets = ['work', 'skills', 'solved', 'process', 'about', 'experience', 'contact']
+  .map((id) => document.getElementById(id)).filter(Boolean);
+let navRaf = 0;
+function updateCurrent() {
+  navRaf = 0;
+  let current = '';
+  for (const el of navTargets) if (el.getBoundingClientRect().top < innerHeight * 0.5) current = el.id;
+  navLinks.forEach((a) => a.classList.toggle('is-current', a.getAttribute('href') === `#${current}`));
+}
+addEventListener('scroll', () => { if (!navRaf) navRaf = requestAnimationFrame(updateCurrent); }, { passive: true });
+requestAnimationFrame(updateCurrent);
 
 /* ---------- Mobile menu ---------- */
 const menuBtn = $('[data-menu-toggle]');
@@ -146,7 +148,7 @@ filters.forEach((btn) => btn.addEventListener('click', () => {
   filters.forEach((b) => {
     const on = b === btn;
     b.classList.toggle('is-active', on);
-    b.setAttribute('aria-selected', String(on));
+    b.setAttribute('aria-pressed', String(on));
   });
   projects.forEach((p) => {
     const show = kind === 'all' || p.dataset.kind === kind;
@@ -194,7 +196,7 @@ const lightboxImg = $('[data-lightbox-img]');
 caseContent.addEventListener('click', (e) => {
   const img = e.target.closest('.case__gallery img');
   if (!img) return;
-  lightboxImg.src = img.currentSrc || img.src;
+  lightboxImg.src = img.src; // full-size file, not the smaller srcset pick
   lightboxImg.alt = img.alt;
   lightbox.showModal();
 });
