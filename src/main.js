@@ -8,11 +8,21 @@ const root = document.documentElement;
 function currentTheme() {
   return root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 }
-$('[data-theme-toggle]').addEventListener('click', () => {
+const themeBtn = $('[data-theme-toggle]');
+// Tooltip and label describe what a click will do.
+function labelThemeButton() {
+  const label = currentTheme() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+  themeBtn.setAttribute('aria-label', label);
+  themeBtn.dataset.tip = label;
+}
+themeBtn.addEventListener('click', () => {
   const next = currentTheme() === 'dark' ? 'light' : 'dark';
   root.dataset.theme = next;
   try { localStorage.setItem('theme', next); } catch {}
+  labelThemeButton();
 });
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', labelThemeButton);
+labelThemeButton();
 
 /* ---------- Nav: scrolled state, progress bar, current section ---------- */
 const nav = $('[data-nav]');
