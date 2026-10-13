@@ -212,6 +212,9 @@ p { margin: 0; }
   }
   [data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); transition-delay: .25s; }
   [data-tip]:hover::before, [data-tip]:focus-visible::before { opacity: 1; transform: translate(-50%, 0) rotate(45deg); transition-delay: .25s; }
+  /* The résumé button sits near the right edge: anchor its tooltip there so it never spills off-screen */
+  .nav__resume[data-tip]::after { left: auto; right: 0; transform: translateY(-4px); }
+  .nav__resume[data-tip]:hover::after, .nav__resume[data-tip]:focus-visible::after { transform: none; }
 }
 .nav__resume { gap: 6px; }
 .nav__resume svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -226,7 +229,8 @@ p { margin: 0; }
   .nav__actions { gap: 6px; }
   .nav__actions .icon-btn, .nav__resume { width: 38px; height: 38px; }
 }
-@media (max-width: 350px) { .brand__name { display: none; } }
+/* Five header buttons on phones: show just the LJ mark so everything fits */
+@media (max-width: 420px) { .brand__name { display: none; } }
 .nav__burger span { position: absolute; left: 12px; right: 12px; height: 1.8px; background: currentColor; border-radius: 2px; transition: transform .3s var(--ease), top .3s var(--ease); }
 .nav__burger span:first-child { top: 16px; }
 .nav__burger span:last-child { top: 23px; }
