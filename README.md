@@ -16,20 +16,19 @@ Everything visible lives in **`index.html`**:
 
 | What | Where in `index.html` |
 |---|---|
-| Name, role, positioning statement, "at a glance" facts | `INTRO` section |
-| Jobs and education | `EXPERIENCE` section, one `<article class="role">` each (newest first) |
-| Projects | `WORK` section, one `<article class="work">` each, with Problem / Approach / Outcome notes |
-| Case study dialogs | `<template id="case-…">` blocks near the end; a project's `data-case` button opens the matching one |
-| Engineering decisions | `ENGINEERING DECISIONS` section |
-| Principles and skills table | `APPROACH + SKILLS` section |
-| About text, photo, facts | `ABOUT` section |
+| Name, headline, intro, stats | `HERO` section |
+| Project cards | `WORK` section, one `<article class="project">` each. `data-kind` is `app` or `game` (used by the filter tabs); the card colours are the `--p-bg / --p-ink / --p-accent` values in its `style` |
+| Case study dialogs | `<template id="case-…">` blocks near the end; the card's `data-case` button opens the matching one |
+| Skills | `SKILLS` section |
+| Problem-solving stories | `PROBLEMS SOLVED` section |
+| About, experience timeline | `ABOUT` section. There's a commented example `<li>` for adding earlier roles |
 | Email and links | `CONTACT` section (the email appears in the link, the copy button's `data-copy`, and is read by the form) |
 
-Styles are in `src/styles.css` (colour tokens at the top: the "Ocean" palette 03045E → CAF0F8, light by default with an optional dark theme), behaviour in `src/main.js`.
+Styles are in `src/styles.css` (colour tokens at the top, light and dark), behaviour in `src/main.js`.
 
 ## Résumé
 
-`resume/index.html` (with `resume/photo.jpg`) is the source for `public/Louie-Jay-Ceniza-Resume.pdf`, linked from the header, the Experience section and the contact section. After editing it, run `npm run resume` to regenerate the one-page A4 PDF (it warns if anything overflows the page), then commit and push.
+`resume/index.html` (with `resume/photo.jpg`) is the source for `public/Louie-Jay-Ceniza-Resume.pdf`, linked from the nav, hero and contact section. After editing it, run `npm run resume` to regenerate the one-page A4 PDF (it warns if anything overflows the page), then commit and push.
 
 ## Images
 
