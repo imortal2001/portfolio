@@ -25,7 +25,7 @@ Everything visible lives in **`index.html`**:
 | About text, photo, facts | `ABOUT` section |
 | Email and links | `CONTACT` section (the email appears in the link, the copy button's `data-copy`, and is read by the form) |
 
-Styles are in `src/styles.css` (colour tokens at the top: the \"Ocean\" palette 03045E → CAF0F8, light by default with an optional dark theme), behaviour in `src/main.js`.
+Styles are in `src/styles.css` (colour tokens at the top: the "Ocean" palette 03045E → CAF0F8, light by default with an optional dark theme), behaviour in `src/main.js`.
 
 ## Résumé
 
