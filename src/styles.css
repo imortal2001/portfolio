@@ -519,7 +519,6 @@ p { margin: 0; }
    ========================================================================== */
 .footer { padding: 36px 0 44px; color: var(--muted); font-size: .92rem; }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; }
-.footer .link-arrow { color: var(--ink); }
 .to-top {
   position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); z-index: 55;
   display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
