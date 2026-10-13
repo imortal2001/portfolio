@@ -26,6 +26,10 @@ Everything visible lives in **`index.html`**:
 
 Styles are in `src/styles.css` (colour tokens at the top, light and dark), behaviour in `src/main.js`.
 
+## Résumé
+
+`resume/index.html` (with `resume/photo.jpg`) is the source for `public/Louie-Jay-Ceniza-Resume.pdf`, linked from the nav, hero and contact section. After editing it, run `npm run resume` to regenerate the one-page A4 PDF (it warns if anything overflows the page), then commit and push.
+
 ## Images
 
 Screenshots live in `public/images/` as WebP.

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Louie Jay A. Ceniza — Resume</title>
+  <!-- Source for public/Louie-Jay-Ceniza-Resume.pdf. Edit here, then run: npm run resume -->
+  <style>
+    @import "@fontsource-variable/bricolage-grotesque/opsz.css";
+    @import "@fontsource-variable/instrument-sans/wght.css";
+    @import "@fontsource/jetbrains-mono/latin-400.css";
+
+    @page { size: A4; margin: 0; }
+    :root {
+      --navy: #0B1B36; --navy-2: #13284D; --cobalt: #2457F5; --sky: #38BDF8;
+      --ink: #0B1B36; --ink-2: #33415C; --muted: #66748F; --line: #DCE3EF;
+      --display: "Bricolage Grotesque Variable", system-ui, sans-serif;
+      --body: "Instrument Sans Variable", system-ui, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 210mm; height: 297mm; }
+    body { font-family: var(--body); font-size: 9.1pt; line-height: 1.45; color: var(--ink-2); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    a { color: inherit; text-decoration: none; }
+    .page { display: grid; grid-template-columns: 66mm 1fr; width: 210mm; height: 297mm; overflow: hidden; }
+
+    /* Sidebar */
+    .side { background: var(--navy); color: #C9D4EA; padding: 12mm 7mm 10mm 8mm; display: flex; flex-direction: column; gap: 6.8mm; position: relative; overflow: hidden; }
+    .side::before { content: ""; position: absolute; width: 90mm; height: 90mm; border-radius: 50%; right: -45mm; top: -38mm; background: radial-gradient(circle, rgba(56,189,248,.28), transparent 65%); }
+    .photo { position: relative; flex: none; width: 38mm; height: 38mm; border-radius: 50%; overflow: hidden; border: 1.2mm solid var(--cobalt); box-shadow: 0 0 0 .6mm rgba(255,255,255,.12); margin-inline: auto; }
+    .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+    .side h2 { font-family: var(--mono); font-weight: 400; font-size: 7.2pt; letter-spacing: .14em; text-transform: uppercase; color: var(--sky); margin-bottom: 2.2mm; }
+    .contact { list-style: none; display: grid; gap: 1.8mm; }
+    .contact li { display: grid; grid-template-columns: 4.2mm 1fr; gap: 2mm; align-items: center; color: #fff; font-size: 8.4pt; word-break: break-word; }
+    .contact svg { width: 3.6mm; height: 3.6mm; fill: none; stroke: var(--sky); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .skills { display: grid; gap: 2.4mm; }
+    .skills h3 { font-family: var(--display); font-size: 8.6pt; font-weight: 700; color: #fff; margin-bottom: .8mm; }
+    .tags { display: flex; flex-wrap: wrap; gap: 1.1mm; list-style: none; }
+    .tags li { font-size: 7.5pt; padding: .45mm 1.9mm; border-radius: 99px; background: rgba(255,255,255,.07); border: .25mm solid rgba(255,255,255,.14); color: #E2E9F7; }
+    .edu { display: grid; gap: 2.6mm; }
+    .edu strong { display: block; font-family: var(--display); color: #fff; font-size: 8.6pt; line-height: 1.25; }
+    .edu span { display: block; font-size: 8pt; }
+    .edu em { font-style: normal; font-family: var(--mono); font-size: 7.2pt; color: var(--sky); }
+    .side p.small { font-size: 8.2pt; }
+
+    /* Main */
+    .main { padding: 12mm 11mm 10mm 9.5mm; display: flex; flex-direction: column; gap: 5mm; }
+    header h1 { font-family: var(--display); font-size: 25pt; font-weight: 800; letter-spacing: -.03em; line-height: 1; color: var(--ink); }
+    header .role { margin-top: 2mm; display: flex; align-items: center; gap: 2.5mm; font-family: var(--display); font-weight: 600; font-size: 11.5pt; color: var(--cobalt); }
+    header .role::after { content: ""; flex: 1; height: .5mm; background: linear-gradient(90deg, var(--cobalt), var(--sky), transparent); border-radius: 1mm; }
+    .main h2 { font-family: var(--mono); font-weight: 400; font-size: 7.4pt; letter-spacing: .14em; text-transform: uppercase; color: var(--cobalt); margin-bottom: 2.2mm; display: flex; align-items: center; gap: 2mm; }
+    .main h2::after { content: ""; flex: 1; height: .25mm; background: var(--line); }
+    .profile { font-size: 9.2pt; color: var(--ink-2); }
+    .job + .job { margin-top: 3.4mm; }
+    .job__head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+    .job__head strong { font-family: var(--display); font-size: 10.2pt; color: var(--ink); }
+    .job__when { font-family: var(--mono); font-size: 7.4pt; color: var(--muted); white-space: nowrap; }
+    .job__org { font-size: 8.6pt; color: var(--cobalt); font-weight: 600; margin: .4mm 0 1.2mm; }
+    .job__org span { color: var(--muted); font-weight: 400; }
+    ul.points { list-style: none; display: grid; gap: .9mm; }
+    ul.points li { position: relative; padding-left: 3.6mm; }
+    ul.points li::before { content: ""; position: absolute; left: .4mm; top: 1.75mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--cobalt); }
+    .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6mm 4mm; }
+    .proj { padding: 2.4mm 2.8mm; border-radius: 2mm; border: .25mm solid var(--line); border-left: .9mm solid var(--cobalt); }
+    .proj strong { font-family: var(--display); font-size: 9.4pt; color: var(--ink); }
+    .proj p { font-size: 8.1pt; margin: .5mm 0 .8mm; }
+    .proj .stack { font-family: var(--mono); font-size: 6.7pt; color: var(--muted); }
+    .proj a { display: block; font-size: 7.6pt; color: var(--cobalt); font-weight: 600; margin-top: .4mm; }
+    footer { margin-top: auto; font-size: 7.8pt; color: var(--muted); display: flex; justify-content: space-between; border-top: .25mm solid var(--line); padding-top: 2mm; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="side">
+      <div class="photo"><img src="./photo.jpg" alt="Louie Jay Ceniza" /></div>
+
+      <section>
+        <h2>Contact</h2>
+        <ul class="contact">
+          <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Cebu, Philippines</li>
+          <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:louiejayceniza15@gmail.com">louiejayceniza15@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg><a href="https://louiejay.pages.dev">louiejay.pages.dev</a></li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5a3 3 0 0 0-.9-2.4c3-.3 6.1-1.5 6.1-6.6a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.6 12.6 0 0 0-6.6 0C5.8 1 4.7 1.3 4.7 1.3a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 3.2 8.5c0 5.1 3.1 6.3 6.1 6.6a3 3 0 0 0-.9 2.4V21"/></svg><a href="https://github.com/imortal2001">github.com/imortal2001</a></li>
+        </ul>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <div><h3>Languages</h3><ul class="tags"><li>PHP</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>C#</li><li>Java</li><li>C</li></ul></div>
+        <div><h3>Frameworks</h3><ul class="tags"><li>Laravel</li><li>CakePHP</li><li>Vue.js</li><li>React</li><li>Next.js</li><li>React Native / Expo</li><li>Inertia.js</li><li>ASP.NET MVC</li></ul></div>
+        <div><h3>Front end</h3><ul class="tags"><li>HTML</li><li>CSS</li><li>Tailwind CSS</li><li>Bootstrap</li><li>jQuery</li></ul></div>
+        <div><h3>Databases</h3><ul class="tags"><li>MySQL</li><li>MariaDB</li><li>MS SQL</li><li>PostgreSQL</li><li>Supabase</li><li>Firebase</li></ul></div>
+        <div><h3>Tools &amp; platforms</h3><ul class="tags"><li>Git</li><li>Docker</li><li>Vite</li><li>Vitest</li><li>Cloudflare</li><li>Capacitor</li></ul></div>
+        <div><h3>Games &amp; QA</h3><ul class="tags"><li>Phaser</li><li>Three.js</li><li>Manual testing</li><li>Bug reporting</li></ul></div>
+      </section>
+
+      <section class="edu">
+        <h2>Education</h2>
+        <div><strong>BS Information Technology</strong><span>Cebu Technological University</span><em>2020 – 2024</em></div>
+        <div><strong>TVL – Computer System Servicing</strong><span>Mandaue City Comprehensive National High School</span><em>2018 – 2020</em></div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <header>
+        <h1>LOUIE JAY A. CENIZA</h1>
+        <p class="role">Web Developer</p>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p class="profile">Web developer at Forty Degrees Celsius, Inc. in Cebu IT Park, working on NativeCamp, one of Japan’s largest online English conversation schools. I work across the stack in PHP (CakePHP, Laravel), Vue.js, TypeScript and MySQL, and my QA background keeps my work careful and well tested. Outside work I design and ship complete products on my own: a restaurant ordering platform, a realtime music chat app, and games for the web and Android.</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="job">
+          <div class="job__head"><strong>Web Developer</strong><span class="job__when">2024 – PRESENT</span></div>
+          <p class="job__org">Forty Degrees Celsius, Inc. <span>· Cebu IT Park · NativeCamp engineering team</span></p>
+          <ul class="points">
+            <li>Develop and maintain features for NativeCamp’s web platform on a CakePHP / PHP 8 codebase with Vue.js, jQuery, Tailwind CSS and MySQL.</li>
+            <li>Migrate legacy pages to the new Laravel + Next.js (TypeScript) stack, keeping them visually identical to production on desktop and mobile.</li>
+            <li>Work in a spec-driven release process: written specs, impact analysis, unit tests and review before deployment.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job__head"><strong>Web Developer / QA Intern</strong><span class="job__when">FEB 2024 – JUL 2024</span></div>
+          <p class="job__org">Blenditoro Corp. <span>· Philippine team of BlendIT (Estonia)</span></p>
+          <ul class="points">
+            <li>Built <b>Drive</b>, a Google Drive–style file manager on a headless architecture (Laravel back end, Vue.js front end via Inertia.js): nested folders, uploads, sharing, trash and zip downloads.</li>
+            <li>Explored new stacks to streamline production and found Laravel, Vue.js and Inertia.js a strong fit for the team’s projects.</li>
+            <li>Performed manual functional testing of web applications: checking new features, finding bugs and verifying UI/UX against specifications.</li>
+            <li>Documented identified bugs and issues clearly to help developers fix them.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected projects</h2>
+        <div class="projects">
+          <div class="proj"><strong>Isla Lola</strong><p>Cozy Filipino farming game for web and Android: a full in-game year, 10 crops, 12 recipes, 5 languages.</p><span class="stack">Phaser 4 · TypeScript · Capacitor · Vitest</span><a href="https://isla-lola.pages.dev">isla-lola.pages.dev</a></div>
+          <div class="proj"><strong>KusinaLink</strong><p>Daily-menu ordering platform for a local restaurant: live stock, cutoff times, kitchen dashboard.</p><span class="stack">Expo · React Native · TypeScript · Supabase</span><a href="https://kusinalink.expo.app">kusinalink.expo.app</a></div>
+          <div class="proj"><strong>Jammr</strong><p>Group chat where friends hear the same song at the same moment, on web and mobile.</p><span class="stack">Cloudflare Workers · Durable Objects · WebSockets</span><a href="https://jammr.kan0.workers.dev">jammr.kan0.workers.dev</a></div>
+          <div class="proj"><strong>Adrift</strong><p>First-person 3D ocean survival game in the browser with custom water and sky shaders.</p><span class="stack">Three.js · JavaScript · Blender</span><a href="https://adrift-gamma.vercel.app">adrift-gamma.vercel.app</a></div>
+        </div>
+      </section>
+
+      <footer><span>References available on request</span><span>Portfolio &amp; case studies: louiejay.pages.dev</span></footer>
+    </main>
+  </div>
+</body>
+</html>

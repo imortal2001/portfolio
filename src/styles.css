@@ -203,7 +203,8 @@ p { margin: 0; }
 .mobile-menu a:not(.btn) { padding: 14px 4px; font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--line); }
 .mobile-menu .btn { margin-top: 16px; }
 
-@media (max-width: 860px) {
+.brand, .nav__links a, .nav__actions .btn { white-space: nowrap; }
+@media (max-width: 1080px) {
   .nav__links, .nav__cta { display: none; }
   .nav__burger { display: inline-grid; }
 }
@@ -229,6 +230,8 @@ p { margin: 0; }
 .hero__lede { max-width: 34em; font-size: clamp(1.05rem, 1.4vw, 1.2rem); color: var(--ink-2); }
 .hero__lede strong { color: var(--ink); }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.hero__cv { align-self: center; margin-left: 8px; color: var(--ink-2); }
+@media (max-width: 520px) { .hero__cv { margin: 6px 0 0 4px; flex-basis: 100%; } }
 
 .stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; margin: 44px 0 0; }
 .stats > div { padding: 0 28px; border-left: 1px solid var(--line); }

@@ -53,7 +53,7 @@ function setMenu(open) {
 menuBtn.addEventListener('click', () => setMenu(menu.hidden));
 menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
-matchMedia('(min-width: 861px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+matchMedia('(min-width: 1081px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
 /* ---------- Word rotator ---------- */
 const rotator = $('[data-rotator]');
