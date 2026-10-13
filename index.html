@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Louie Jay Ceniza — Web Developer, apps &amp; games</title>
-  <meta name="description" content="Louie Jay Ceniza is a web developer in Cebu, Philippines, working on NativeCamp at Forty Degrees Celsius, who designs, builds and ships web apps, mobile apps and games end to end." />
-  <meta name="theme-color" content="#F4F7FC" />
+  <title>Louie Jay Ceniza — Full-stack Engineer</title>
+  <meta name="description" content="Louie Jay Ceniza is a full-stack engineer in Cebu, Philippines, building and modernising production web platforms — currently NativeCamp at Forty Degrees Celsius." />
+  <meta name="theme-color" content="#F7F9FC" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Louie Jay Ceniza — Web Developer, apps &amp; games" />
-  <meta property="og:description" content="Web apps, mobile apps and games, designed, built and shipped end to end." />
+  <meta property="og:title" content="Louie Jay Ceniza — Full-stack Engineer" />
+  <meta property="og:description" content="I build and modernise production web platforms — currently NativeCamp at Forty Degrees Celsius." />
   <meta property="og:url" content="https://louiejay.pages.dev/" />
   <meta property="og:image" content="https://louiejay.pages.dev/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Louie Jay — I build apps &amp; games people love to use" />
+  <meta property="og:image:alt" content="Louie Jay Ceniza — Full-stack engineer" />
   <link rel="canonical" href="https://louiejay.pages.dev/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://louiejay.pages.dev/og.png" />
@@ -52,11 +52,11 @@
         <span class="brand__name">Louie Jay</span>
       </a>
       <nav class="nav__links" aria-label="Primary">
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#solved">Problem solving</a>
-        <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="#decisions">Engineering</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
       </nav>
       <div class="nav__actions">
         <a class="icon-btn icon-btn--brand" href="https://github.com/imortal2001" target="_blank" rel="noopener" aria-label="GitHub profile" data-tip="GitHub profile">
@@ -73,196 +73,201 @@
           <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
         </button>
-        <a class="btn btn--primary btn--sm nav__cta" href="#contact">Hire me</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contact">Get in touch</a>
         <button class="icon-btn nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
           <span></span><span></span>
         </button>
       </div>
     </div>
     <div class="mobile-menu" id="mobile-menu" hidden>
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#solved">Problem solving</a>
-      <a href="#about">About</a>
       <a href="#experience">Experience</a>
-      <a href="#contact" class="btn btn--primary">Hire me</a>
+      <a href="#work">Work</a>
+      <a href="#decisions">Engineering</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn--primary">Get in touch</a>
     </div>
   </header>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__copy">
-          <p class="status" data-anim="1"><span class="status__dot"></span>Available for freelance &amp; full-time roles</p>
-          <h1 class="hero__title" data-anim="2">
-            I build <span class="rotator" data-rotator aria-live="off"><span class="rotator__word is-on">web apps</span><span class="rotator__word">mobile apps</span><span class="rotator__word">games</span><span class="rotator__word">realtime tools</span></span>
-            <br />people <em>love</em> to&nbsp;use.
-          </h1>
-          <p class="hero__lede" data-anim="3">
-            Hi, I’m <strong>Louie Jay</strong> — a full-stack developer in Cebu, Philippines, currently building
-            NativeCamp at Forty Degrees Celsius. I take ideas from first sketch to a live product: interface, backend,
-            database, deployment and app-store build.
+    <!-- ============ INTRO ============ -->
+    <section class="intro" id="top">
+      <div class="container intro__grid">
+        <div class="intro__copy">
+          <p class="intro__status" data-anim="1"><span class="status__dot"></span>Available for freelance &amp; full-time roles</p>
+          <h1 class="intro__name" data-anim="2">Louie Jay Ceniza</h1>
+          <p class="intro__role" data-anim="2">Full-stack engineer · Cebu, Philippines</p>
+          <p class="intro__statement" data-anim="3">
+            I build and modernise <em>production</em> web platforms — currently NativeCamp at Forty Degrees Celsius.
+            On my own time I take products from first sketch to live release: data model, API, interface and deployment.
           </p>
-          <div class="hero__ctas" data-anim="4">
-            <a class="btn btn--primary btn--lg magnetic" href="#work">See my work <span aria-hidden="true">→</span></a>
-            <a class="btn btn--ghost btn--lg magnetic" href="#contact">Start a project</a>
+          <div class="intro__actions" data-anim="4">
+            <a class="btn btn--primary" href="#work">Selected work <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#experience">Experience</a>
           </div>
-          <dl class="stats" data-anim="5">
-            <div><dt><span data-count="4">4</span></dt><dd>products built &amp; live</dd></div>
-            <div><dt><span data-count="3">3</span></dt><dd>platforms: web, Android &amp; iOS</dd></div>
-            <div><dt><span data-count="5">5</span></dt><dd>languages shipped in one game</dd></div>
-          </dl>
         </div>
-
-        <div class="stage" data-parallax aria-hidden="true">
-          <div class="stage__browser frame-browser float float--b" data-depth="0.6">
-            <div class="frame-browser__bar"><i></i><i></i><i></i><span>adrift — three.js</span></div>
-            <img src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="" width="1440" height="900" />
-          </div>
-          <div class="stage__phone stage__phone--a frame-phone float float--a" data-depth="1.2">
-            <img src="/images/isla-farm.webp" srcset="/images/isla-farm-400.webp 400w, /images/isla-farm.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="" width="780" height="1688" />
-          </div>
-          <div class="stage__phone stage__phone--b frame-phone float float--c" data-depth="0.9">
-            <img src="/images/kusina-landing.webp" srcset="/images/kusina-landing-400.webp 400w, /images/kusina-landing.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="" width="780" height="1688" />
-          </div>
-          <div class="stage__chip stage__chip--1 float float--c" data-depth="1.6"><span class="dot dot--green"></span>Synced playback · ±1.5s</div>
-          <div class="stage__chip stage__chip--2 float float--a" data-depth="1.4">★ 42-day story season</div>
-        </div>
+        <dl class="glance" data-anim="4">
+          <div><dt>Currently</dt><dd>Web Developer, Forty Degrees Celsius — NativeCamp platform</dd></div>
+          <div><dt>Focus</dt><dd>PHP · Laravel · CakePHP · Vue.js · TypeScript · MySQL</dd></div>
+          <div><dt>Shipped</dt><dd>4 products of my own, all live: web, Android and edge-hosted</dd></div>
+          <div><dt>Education</dt><dd>BS Information Technology, Cebu Technological University</dd></div>
+        </dl>
       </div>
+    </section>
 
-      <div class="marquee" aria-label="Technologies I work with">
-        <div class="marquee__track">
-          <span>PHP</span><span>Laravel</span><span>Vue.js</span><span>CakePHP</span><span>MySQL</span><span>TypeScript</span><span>React Native</span><span>Expo</span><span>Phaser</span><span>Three.js</span><span>Supabase</span><span>PostgreSQL</span><span>Cloudflare Workers</span><span>Durable Objects</span><span>WebSockets</span><span>Capacitor</span><span>Vite</span><span>Vitest</span><span>Tailwind</span><span>Blender</span>
-          <span aria-hidden="true">PHP</span><span aria-hidden="true">Laravel</span><span aria-hidden="true">Vue.js</span><span aria-hidden="true">CakePHP</span><span aria-hidden="true">MySQL</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">React Native</span><span aria-hidden="true">Expo</span><span aria-hidden="true">Phaser</span><span aria-hidden="true">Three.js</span><span aria-hidden="true">Supabase</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">Cloudflare Workers</span><span aria-hidden="true">Durable Objects</span><span aria-hidden="true">WebSockets</span><span aria-hidden="true">Capacitor</span><span aria-hidden="true">Vite</span><span aria-hidden="true">Vitest</span><span aria-hidden="true">Tailwind</span><span aria-hidden="true">Blender</span>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="container split">
+        <header class="split__head reveal">
+          <p class="label"><span>01</span> Experience</p>
+          <h2 class="split__title">Where I’ve worked</h2>
+        </header>
+        <div class="split__body">
+          <article class="role reveal">
+            <div class="role__when">2024 — Present</div>
+            <div class="role__main">
+              <h3>Web Developer <span class="role__at">·</span> <a href="https://fdc-inc.com" target="_blank" rel="noopener">Forty Degrees Celsius, Inc.</a></h3>
+              <p class="role__org">Cebu IT Park · engineering team behind <a href="https://nativecamp.net" target="_blank" rel="noopener">NativeCamp</a>, one of Japan’s largest online English conversation schools</p>
+              <ul class="points">
+                <li>Develop and maintain features for NativeCamp’s web platform on a large CakePHP / PHP 8 codebase with Vue.js, jQuery, Tailwind CSS and MySQL.</li>
+                <li>Migrate legacy pages to the new Laravel + Next.js (TypeScript) stack, keeping each one visually identical to production on desktop and mobile.</li>
+                <li>Work in a spec-driven release process — written specs, impact analysis, unit tests and review before anything ships.</li>
+              </ul>
+              <p class="stack">PHP 8 · CakePHP · Laravel · Vue.js · Next.js · TypeScript · jQuery · Tailwind CSS · MySQL · Docker</p>
+            </div>
+          </article>
+
+          <article class="role reveal">
+            <div class="role__when">Feb — Jul 2024</div>
+            <div class="role__main">
+              <h3>Web Developer / QA Intern <span class="role__at">·</span> <a href="https://blendit.eu" target="_blank" rel="noopener">Blenditoro Corp.</a></h3>
+              <p class="role__org">Philippine team of BlendIT, an Estonian software company delivering web, mobile and UX projects for clients</p>
+              <ul class="points">
+                <li>Built <strong>Drive</strong>, a Google Drive–style file manager on a headless Laravel back end and Vue.js front end (Inertia.js): nested folders, file and folder uploads, sharing, trash with restore and zip downloads.</li>
+                <li>Performed manual functional testing of client web apps — verifying new features, finding bugs and checking UI/UX against specifications.</li>
+                <li>Documented bugs and issues clearly so developers could reproduce and fix them quickly.</li>
+              </ul>
+              <p class="stack">Laravel 11 · Vue 3 · Inertia.js · Tailwind CSS · MySQL · Docker</p>
+            </div>
+          </article>
+
+          <article class="role role--edu reveal">
+            <div class="role__when">2020 — 2024</div>
+            <div class="role__main">
+              <h3>BS Information Technology <span class="role__at">·</span> Cebu Technological University</h3>
+              <p class="role__org">Cebu City, Philippines</p>
+            </div>
+          </article>
+
+          <a class="link-arrow reveal" href="/Louie-Jay-Ceniza-Resume.pdf" download="Louie-Jay-Ceniza-Resume.pdf">Download full résumé (PDF) <span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
 
     <!-- ============ WORK ============ -->
-    <section class="section" id="work">
+    <section class="section section--alt" id="work">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow"><span>01</span> Selected work</p>
-          <h2 class="section__title">Real products, shipped<br />and running.</h2>
-          <p class="section__lede">Every project here was designed, built and deployed by me — from the database schema to the last animation.</p>
+          <p class="label"><span>02</span> Selected work</p>
+          <h2 class="section__title">Products I designed, built and run</h2>
+          <p class="section__lede">Independent projects, each live in production. I own them end to end — requirements, data model, code, deployment and support.</p>
         </header>
 
-        <div class="filters reveal" role="group" aria-label="Filter projects">
-          <button class="filter is-active" type="button" aria-pressed="true" data-filter="all">All <sup>4</sup></button>
-          <button class="filter" type="button" aria-pressed="false" data-filter="app">Apps <sup>2</sup></button>
-          <button class="filter" type="button" aria-pressed="false" data-filter="game">Games <sup>2</sup></button>
-        </div>
-
-        <div class="projects">
-          <!-- Isla Lola -->
-          <article class="project project--isla reveal" data-kind="game" style="--p-bg:#F6E3BC;--p-ink:#2E2721;--p-accent:#2F8F89">
-            <div class="bunting" aria-hidden="true"></div>
-            <div class="project__media">
-              <div class="project__shots">
-                <div class="frame-phone tilt"><img src="/images/isla-farm.webp" srcset="/images/isla-farm-400.webp 400w, /images/isla-farm.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Isla Lola farm with crops, a nipa hut and the player" width="780" height="1688" loading="lazy" /></div>
-                <div class="frame-phone tilt"><img src="/images/isla-fiesta.webp" srcset="/images/isla-fiesta-400.webp 400w, /images/isla-fiesta.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Isla Lola town fiesta celebration scene" width="780" height="1688" loading="lazy" /></div>
-              </div>
-            </div>
-            <div class="project__body">
-              <p class="project__meta"><span>01</span> Mobile &amp; web game · 2026 · Solo</p>
-              <h3 class="project__title">Isla Lola</h3>
-              <p class="project__pitch">A cozy Filipino island-life game about farming, fishing, cooking and community — built to respect the player’s time.</p>
-              <ul class="ticks">
-                <li>Full in-game year: seasons, typhoons, fiestas and 14 cultural events</li>
-                <li>10 crops, 12 recipes, villagers, memories and home decoration</li>
-                <li>Android app plus web build, localised into 5 Philippine languages</li>
-              </ul>
-              <ul class="chips" aria-label="Technologies">
-                <li>Phaser 4</li><li>TypeScript</li><li>Vite</li><li>Capacitor</li><li>Vitest</li><li>Cloudflare Pages</li>
-              </ul>
-              <div class="project__links">
-                <button class="btn btn--dark" type="button" data-case="isla">Read case study <span aria-hidden="true">→</span></button>
-                <a class="link-arrow" href="https://isla-lola.pages.dev" target="_blank" rel="noopener">Play it live <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
+        <div class="works">
           <!-- KusinaLink -->
-          <article class="project project--flip reveal" data-kind="app" style="--p-bg:#B4532E;--p-ink:#FFF6EE;--p-accent:#FFD9B8">
-            <div class="project__media">
-              <div class="frame-browser project__desk tilt">
+          <article class="work reveal">
+            <div class="work__media">
+              <div class="frame-browser">
                 <div class="frame-browser__bar"><i></i><i></i><i></i><span>kusinalink.expo.app</span></div>
                 <img src="/images/kusina-desktop.webp" srcset="/images/kusina-desktop-960.webp 960w, /images/kusina-desktop.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="KusinaLink landing page on desktop showing today's menu" width="1440" height="900" loading="lazy" />
               </div>
-              <div class="frame-phone project__phone tilt"><img src="/images/kusina-menu.webp" srcset="/images/kusina-menu-400.webp 400w, /images/kusina-menu.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="KusinaLink daily menu on a phone with Add buttons" width="780" height="1688" loading="lazy" /></div>
             </div>
-            <div class="project__body">
-              <p class="project__meta"><span>02</span> Ordering platform · 2026 · Restaurant client</p>
-              <h3 class="project__title">KusinaLink</h3>
-              <p class="project__pitch">Daily-menu ordering for a working restaurant: customers order before the cutoff, the kitchen sees exactly what to cook, everything goes out in one delivery.</p>
-              <ul class="ticks">
-                <li>Live stock — “Only 3 left” and “Sold out” update in real time</li>
-                <li>Vendor dashboard: kitchen totals, handover list, bulk status updates</li>
-                <li>Customers edit or cancel their own orders before the cutoff</li>
-              </ul>
-              <ul class="chips" aria-label="Technologies">
-                <li>Expo</li><li>React Native</li><li>TypeScript</li><li>NativeWind</li><li>Supabase</li><li>PostgreSQL</li>
-              </ul>
-              <div class="project__links">
-                <button class="btn btn--dark" type="button" data-case="kusina">Read case study <span aria-hidden="true">→</span></button>
-                <a class="link-arrow" href="https://kusinalink.expo.app" target="_blank" rel="noopener">Open live app <span aria-hidden="true">↗</span></a>
+            <div class="work__body">
+              <p class="work__meta">2026 · Client project · Ordering platform</p>
+              <h3 class="work__title">KusinaLink</h3>
+              <p class="work__summary">Daily-menu ordering for a restaurant that delivers lunch to an office — in daily use.</p>
+              <dl class="notes">
+                <div><dt>Problem</dt><dd>Orders came in over chat. The cook guessed quantities, dishes sold out mid-order and every packed meal had to be matched to a name by hand.</dd></div>
+                <div><dt>Approach</dt><dd>Expo and Supabase with row-level security. Stock is deducted inside an atomic Postgres function, orders snapshot name and price, and the kitchen gets per-dish totals and a handover list.</dd></div>
+                <div><dt>Outcome</dt><dd>Overselling is impossible by design, the kitchen cooks to real numbers, and releases ship with one verified deploy command.</dd></div>
+              </dl>
+              <p class="stack">Expo · React Native · TypeScript · Supabase · PostgreSQL · EAS Hosting</p>
+              <div class="work__links">
+                <button class="btn btn--ghost btn--sm" type="button" data-case="kusina">Case study <span aria-hidden="true">→</span></button>
+                <a class="link-arrow" href="https://kusinalink.expo.app" target="_blank" rel="noopener">Live app <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
           <!-- Jammr -->
-          <article class="project reveal" data-kind="app" style="--p-bg:#2A1550;--p-ink:#F4EEFF;--p-accent:#D67BFF">
-            <div class="project__media project__media--jammr">
-              <div class="frame-browser project__desk tilt">
-                <div class="frame-browser__bar"><i></i><i></i><i></i><span>jammr — weekend-crew</span></div>
-                <img src="/images/jammr-chat.webp" srcset="/images/jammr-chat-960.webp 960w, /images/jammr-chat.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Jammr group chat on desktop with message bubbles and a Start a jam button" width="1440" height="900" loading="lazy" />
+          <article class="work reveal">
+            <div class="work__media">
+              <div class="frame-browser">
+                <div class="frame-browser__bar"><i></i><i></i><i></i><span>jammr.kan0.workers.dev</span></div>
+                <img src="/images/jammr-chat.webp" srcset="/images/jammr-chat-960.webp 960w, /images/jammr-chat.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Jammr group chat on desktop" width="1440" height="900" loading="lazy" />
               </div>
-              <div class="frame-phone project__phone tilt"><img src="/images/jammr-mobile.webp" srcset="/images/jammr-mobile-400.webp 400w, /images/jammr-mobile.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Jammr chat on a phone" width="780" height="1688" loading="lazy" /></div>
             </div>
-            <div class="project__body">
-              <p class="project__meta"><span>03</span> Realtime web &amp; mobile app · 2026 · Solo</p>
-              <h3 class="project__title">Jammr</h3>
-              <p class="project__pitch">A group chat where friends start a “jam” and hear the same song at the same second — on the web or on their phones.</p>
-              <ul class="ticks">
-                <li>Shared queue, autoplay and recommendations, synced across every device</li>
-                <li>Slack-style chat: replies, reactions, ~1,900 emoji, custom emoji, files</li>
-                <li>One edge server per room — no servers to manage, runs on the free tier</li>
-              </ul>
-              <ul class="chips" aria-label="Technologies">
-                <li>Cloudflare Workers</li><li>Durable Objects</li><li>WebSockets</li><li>JavaScript</li><li>React Native</li><li>YouTube API</li>
-              </ul>
-              <div class="project__links">
-                <button class="btn btn--dark" type="button" data-case="jammr">Read case study <span aria-hidden="true">→</span></button>
-                <a class="link-arrow" href="https://jammr.kan0.workers.dev" target="_blank" rel="noopener">Try it live <span aria-hidden="true">↗</span></a>
+            <div class="work__body">
+              <p class="work__meta">2026 · Solo · Realtime web &amp; mobile</p>
+              <h3 class="work__title">Jammr</h3>
+              <p class="work__summary">A group chat where friends hear the same song at the same moment, on the web or on their phones.</p>
+              <dl class="notes">
+                <div><dt>Problem</dt><dd>Listening together over a call means one person shares their screen and everyone else hears compressed audio, out of sync.</dd></div>
+                <div><dt>Approach</dt><dd>One Durable Object per room owns state and WebSockets. Clients estimate clock offset NTP-style and correct drift; songs are matched through a quota-aware pipeline with caching.</dd></div>
+                <div><dt>Outcome</dt><dd>Browsers and phones stay within 1.5 s of each other, with no servers to manage, on Cloudflare’s free tier.</dd></div>
+              </dl>
+              <p class="stack">Cloudflare Workers · Durable Objects · WebSockets · JavaScript · React Native</p>
+              <div class="work__links">
+                <button class="btn btn--ghost btn--sm" type="button" data-case="jammr">Case study <span aria-hidden="true">→</span></button>
+                <a class="link-arrow" href="https://jammr.kan0.workers.dev" target="_blank" rel="noopener">Live app <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Isla Lola -->
+          <article class="work reveal">
+            <div class="work__media work__media--phones">
+              <div class="frame-phone"><img src="/images/isla-farm.webp" srcset="/images/isla-farm-400.webp 400w, /images/isla-farm.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Isla Lola farm with crops and a nipa hut" width="780" height="1688" loading="lazy" /></div>
+              <div class="frame-phone"><img src="/images/isla-fiesta.webp" srcset="/images/isla-fiesta-400.webp 400w, /images/isla-fiesta.webp 780w" sizes="(max-width: 960px) 40vw, 220px" alt="Isla Lola town fiesta scene" width="780" height="1688" loading="lazy" /></div>
+            </div>
+            <div class="work__body">
+              <p class="work__meta">2026 · Solo · Web &amp; Android game</p>
+              <h3 class="work__title">Isla Lola</h3>
+              <p class="work__summary">A cozy Filipino island-life game about farming, fishing, cooking and community.</p>
+              <dl class="notes">
+                <div><dt>Problem</dt><dd>Grow a game to a full year of content without breaking saves — and without gems, timers or fear-of-missing-out mechanics.</dd></div>
+                <div><dt>Approach</dt><dd>A pure rules engine kept separate from rendering and covered by Vitest suites, versioned saves migrated forward, an i18n layer for five languages and Capacitor for Android.</dd></div>
+                <div><dt>Outcome</dt><dd>A full in-game year on the web plus a signed, store-ready Android build; new content never resets a player’s progress.</dd></div>
+              </dl>
+              <p class="stack">Phaser 4 · TypeScript · Vite · Vitest · Capacitor · Cloudflare Pages</p>
+              <div class="work__links">
+                <button class="btn btn--ghost btn--sm" type="button" data-case="isla">Case study <span aria-hidden="true">→</span></button>
+                <a class="link-arrow" href="https://isla-lola.pages.dev" target="_blank" rel="noopener">Play it <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
           <!-- Adrift -->
-          <article class="project project--flip reveal" data-kind="game" style="--p-bg:#0E1F2E;--p-ink:#E6F1F7;--p-accent:#7FD3E6">
-            <div class="project__media">
-              <div class="frame-browser project__wide tilt">
+          <article class="work reveal">
+            <div class="work__media">
+              <div class="frame-browser">
                 <div class="frame-browser__bar"><i></i><i></i><i></i><span>adrift-gamma.vercel.app</span></div>
-                <img src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Adrift: first-person view of the open ocean with floating debris and a forested shore" width="1440" height="900" loading="lazy" />
+                <img src="/images/adrift-ocean.webp" srcset="/images/adrift-ocean-960.webp 960w, /images/adrift-ocean.webp 1440w" sizes="(max-width: 960px) 92vw, 620px" alt="Adrift: first-person view of the open ocean with debris and a forested shore" width="1440" height="900" loading="lazy" />
               </div>
             </div>
-            <div class="project__body">
-              <p class="project__meta"><span>04</span> 3D browser game · 2026 · Prototype</p>
-              <h3 class="project__title">Adrift</h3>
-              <p class="project__pitch">A first-person ocean survival game in the browser: hook debris, craft tools, grow your raft — then swim for a coast full of dinosaurs.</p>
-              <ul class="ticks">
-                <li>Custom ocean and sky shaders with swell, diving and underwater light</li>
-                <li>Gather → craft → build loop with a single hotbar “in hand” state</li>
-                <li>Living ecosystem: herds flee, raptors and tyrannosaurs hunt each other</li>
-              </ul>
-              <ul class="chips" aria-label="Technologies">
-                <li>Three.js</li><li>JavaScript</li><li>Shaders</li><li>Blender</li><li>Python</li>
-              </ul>
-              <div class="project__links">
-                <button class="btn btn--dark" type="button" data-case="adrift">Read case study <span aria-hidden="true">→</span></button>
-                <a class="link-arrow" href="https://adrift-gamma.vercel.app" target="_blank" rel="noopener">Play it live <span aria-hidden="true">↗</span></a>
+            <div class="work__body">
+              <p class="work__meta">2026 · Solo · 3D browser game</p>
+              <h3 class="work__title">Adrift</h3>
+              <p class="work__summary">First-person ocean survival in the browser: hook debris, craft tools, grow a raft.</p>
+              <dl class="notes">
+                <div><dt>Problem</dt><dd>Prove a convincing 3D survival game can run instantly in a browser tab, with no install.</dd></div>
+                <div><dt>Approach</dt><dd>Three.js with custom ocean and sky shaders, modular systems for terrain, wildlife AI and diving, and a Blender-to-GLB asset pipeline scripted in Python.</dd></div>
+                <div><dt>Outcome</dt><dd>A playable prototype with a full gather–craft–build loop and a living ecosystem, live on the web.</dd></div>
+              </dl>
+              <p class="stack">Three.js · JavaScript · GLSL shaders · Blender · Python</p>
+              <div class="work__links">
+                <button class="btn btn--ghost btn--sm" type="button" data-case="adrift">Case study <span aria-hidden="true">→</span></button>
+                <a class="link-arrow" href="https://adrift-gamma.vercel.app" target="_blank" rel="noopener">Play it <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
@@ -270,243 +275,144 @@
       </div>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section section--alt" id="skills">
+    <!-- ============ ENGINEERING DECISIONS ============ -->
+    <section class="section" id="decisions">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow"><span>02</span> What I bring</p>
-          <h2 class="section__title">One developer,<br />the whole product.</h2>
-          <p class="section__lede">I’m comfortable at every layer, so nothing gets lost between design, frontend, backend and release.</p>
+          <p class="label"><span>03</span> Engineering decisions</p>
+          <h2 class="section__title">Trade-offs behind the work</h2>
+          <p class="section__lede">The parts that took the most thought, and why I solved them the way I did.</p>
         </header>
-
-        <div class="caps">
-          <article class="cap reveal">
-            <div class="cap__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-            <h3>Web &amp; mobile apps</h3>
-            <p>Responsive, accessible interfaces that feel native on phones and desktops — one codebase where it makes sense.</p>
-            <ul class="chips chips--soft"><li>TypeScript</li><li>Vue.js</li><li>React</li><li>React Native</li><li>Next.js</li><li>Tailwind CSS</li><li>HTML &amp; CSS</li></ul>
-          </article>
-          <article class="cap reveal">
-            <div class="cap__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 11h4M8 9v4"/><circle cx="15.5" cy="10.5" r=".8"/><circle cx="17.5" cy="12.5" r=".8"/><path d="M7 5h10a5 5 0 0 1 5 5v2a5 5 0 0 1-8.5 3.5h-3A5 5 0 0 1 2 12v-2a5 5 0 0 1 5-5Z"/></svg></div>
-            <h3>Game development</h3>
-            <p>2D and 3D games with real systems behind them — economies, seasons, AI, saves — and the feel to make them fun.</p>
-            <ul class="chips chips--soft"><li>Phaser</li><li>Three.js</li><li>Shaders</li><li>Game design</li><li>Blender</li></ul>
-          </article>
-          <article class="cap reveal">
-            <div class="cap__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="2.5"/><path d="M4 5.5v6c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-6M4 11.5v6c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-6"/></svg></div>
-            <h3>Backend &amp; realtime</h3>
-            <p>Data models that hold up, safe concurrent writes, live updates over WebSockets and APIs that scale on the edge.</p>
-            <ul class="chips chips--soft"><li>PHP</li><li>Laravel</li><li>CakePHP</li><li>MySQL</li><li>Supabase / PostgreSQL</li><li>Cloudflare Workers</li><li>WebSockets</li></ul>
-          </article>
-          <article class="cap reveal">
-            <div class="cap__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c3 2 5 5.5 5 9.5L15 17H9l-2-4.5C7 8.5 9 5 12 3Z"/><circle cx="12" cy="10" r="1.6"/><path d="M9 17l-2 4M15 17l2 4M12 17v4"/></svg></div>
-            <h3>Shipping &amp; quality</h3>
-            <p>Automated tests, migrations, CI-friendly deploy scripts and store-ready Android builds — not just a demo on my laptop.</p>
-            <ul class="chips chips--soft"><li>Vitest</li><li>Capacitor</li><li>EAS</li><li>Cloudflare Pages</li><li>Git</li></ul>
-          </article>
-        </div>
-
-        <div class="strengths reveal">
-          <div><strong>Product thinking</strong><span>I ask who it’s for and what “done” means before writing code.</span></div>
-          <div><strong>Clear communication</strong><span>Plain-language updates, written docs and README guides for every project.</span></div>
-          <div><strong>Craft &amp; detail</strong><span>Empty states, slow networks, undo buttons — the edges users actually hit.</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROBLEMS SOLVED ============ -->
-    <section class="section" id="solved">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow"><span>03</span> Problem solving</p>
-          <h2 class="section__title">Hard problems,<br />simple experiences.</h2>
-          <p class="section__lede">A few of the tricky bits behind the projects above — and how I solved them.</p>
-        </header>
-
-        <div class="solved">
-          <article class="solve reveal">
-            <p class="solve__tag">Jammr</p>
-            <h3>Everyone hears the same second</h3>
-            <p>The server never streams audio or a playhead. It stores “position P at server time T”; each client estimates its clock offset with NTP-style pings and corrects any drift over 1.5&nbsp;s. New songs start 1.5&nbsp;s in the future so every device can buffer and begin together.</p>
-            <p class="solve__result">Result: tight sync across browsers and phones with almost no server load.</p>
-          </article>
-          <article class="solve reveal">
-            <p class="solve__tag">KusinaLink</p>
-            <h3>Never sell the last plate twice</h3>
-            <p>Stock is deducted at the moment an order is placed, inside a single atomic Postgres function — so two customers racing for the last serving can’t both win. Cancellations return stock, and orders snapshot the name and price they were bought at.</p>
-            <p class="solve__result">Result: the kitchen’s numbers always match reality.</p>
-          </article>
-          <article class="solve reveal">
-            <p class="solve__tag">Isla Lola</p>
-            <h3>A game that grows without breaking saves</h3>
-            <p>All game rules live in a pure, renderer-free state module covered by Vitest suites. Saves are versioned and migrated forward (v1 → v6), so every new season, crop and feature arrived without wiping anyone’s progress.</p>
-            <p class="solve__result">Result: new seasons ship without resetting anyone’s progress.</p>
-          </article>
-          <article class="solve reveal">
-            <p class="solve__tag">Jammr</p>
-            <h3>Unlimited music on a 100-search budget</h3>
-            <p>YouTube allows ~100 searches a day. I built a matching pipeline that tries free sources first — MusicBrainz by ISRC, then the artist’s official channels — and only searches as a last resort, caching every match and pre-matching chart songs on a cron.</p>
-            <p class="solve__result">Result: most songs never touch the search quota.</p>
-          </article>
-          <article class="solve reveal">
-            <p class="solve__tag">KusinaLink</p>
-            <h3>Deploys that really went live</h3>
-            <p>The hosting alias sometimes kept serving the previous build after a production deploy. My deploy script stamps each build with a unique ID, polls the live site for it and re-promotes until the new version is actually being served.</p>
-            <p class="solve__result">Result: one command, and production is verified fresh.</p>
-          </article>
-          <article class="solve reveal">
-            <p class="solve__tag">Isla Lola</p>
-            <h3>Speaking the player’s language</h3>
-            <p>A small i18n layer with English keys ships the UI in English, Filipino, Cebuano, Ilocano and Hiligaynon — with a glossary that deliberately keeps the characters’ Taglish dialogue intact, because that’s how they really talk.</p>
-            <p class="solve__result">Result: a game that feels local, not translated.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROCESS ============ -->
-    <section class="section section--ink" id="process">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow"><span>04</span> How I work</p>
-          <h2 class="section__title">From idea to live product,<br />without the guesswork.</h2>
-        </header>
-        <ol class="steps">
-          <li class="step reveal"><span class="step__n">01</span><h3>Understand</h3><p>We agree on who it’s for, what success looks like and what’s out of scope — written down, so nothing gets lost.</p></li>
-          <li class="step reveal"><span class="step__n">02</span><h3>Design</h3><p>Flows and screens first, then the data model. Decisions you can see and react to before they’re expensive to change.</p></li>
-          <li class="step reveal"><span class="step__n">03</span><h3>Build in slices</h3><p>Working features every few days on a live preview link, so you can click through progress instead of reading reports.</p></li>
-          <li class="step reveal"><span class="step__n">04</span><h3>Ship &amp; support</h3><p>Production deploy, docs and a handover — then iteration based on how real people actually use it.</p></li>
+        <ol class="decisions">
+          <li class="decision reveal">
+            <h3>Sync without streaming</h3>
+            <p>The server never streams audio or a playhead. It stores “position P at server time T”; each client estimates its clock offset and corrects drift over 1.5 s, and new songs start 1.5 s in the future so every device can buffer first.</p>
+            <p class="decision__tag">Jammr</p>
+          </li>
+          <li class="decision reveal">
+            <h3>Correctness in the database, not the client</h3>
+            <p>Stock is deducted in one atomic Postgres function at the moment of ordering, so two customers racing for the last serving can’t both win. Orders snapshot name and price so later edits never rewrite history.</p>
+            <p class="decision__tag">KusinaLink</p>
+          </li>
+          <li class="decision reveal">
+            <h3>Rules engine apart from rendering</h3>
+            <p>All game rules live in a pure, renderer-free module with Vitest coverage. Saves are versioned and migrated forward through six versions, so every content update shipped without resetting progress.</p>
+            <p class="decision__tag">Isla Lola</p>
+          </li>
+          <li class="decision reveal">
+            <h3>Designing around a hard quota</h3>
+            <p>YouTube allows about 100 searches a day. Matching tries free sources first — MusicBrainz by ISRC, then official artist channels — caches every result and pre-matches chart songs on a cron.</p>
+            <p class="decision__tag">Jammr</p>
+          </li>
+          <li class="decision reveal">
+            <h3>Deploys you can trust</h3>
+            <p>The host sometimes kept serving the old build after a release. The deploy script stamps each build with an ID, polls production for it and re-promotes until the new version is really live.</p>
+            <p class="decision__tag">KusinaLink</p>
+          </li>
+          <li class="decision reveal">
+            <h3>Localisation with intent</h3>
+            <p>A small i18n layer ships the UI in English, Filipino, Cebuano, Ilocano and Hiligaynon, with a glossary that deliberately keeps the characters’ Taglish dialogue as it is.</p>
+            <p class="decision__tag">Isla Lola</p>
+          </li>
         </ol>
+      </div>
+    </section>
+
+    <!-- ============ APPROACH + SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="container split">
+        <header class="split__head reveal">
+          <p class="label"><span>04</span> Approach &amp; skills</p>
+          <h2 class="split__title">How I work</h2>
+        </header>
+        <div class="split__body">
+          <ol class="principles">
+            <li class="reveal"><h3>Agree on “done” first</h3><p>Who it’s for, what success looks like and what’s out of scope — written down before code.</p></li>
+            <li class="reveal"><h3>Model the data early</h3><p>Flows and data model before screens; decisions stay cheap while they’re still on paper.</p></li>
+            <li class="reveal"><h3>Ship in small slices</h3><p>Working features on a live preview every few days, behind tests and migrations.</p></li>
+            <li class="reveal"><h3>Own it after launch</h3><p>Verified deploys, documentation and iteration based on how people actually use it.</p></li>
+          </ol>
+
+          <table class="skills reveal">
+            <caption class="label"><span>Toolbox</span></caption>
+            <tbody>
+              <tr><th scope="row">Languages</th><td>PHP, JavaScript, TypeScript, SQL, C#, Java</td></tr>
+              <tr><th scope="row">Back end</th><td>Laravel, CakePHP, Supabase / PostgreSQL, MySQL, Cloudflare Workers, Durable Objects, WebSockets</td></tr>
+              <tr><th scope="row">Front end</th><td>Vue.js, React, Next.js, Inertia.js, Tailwind CSS, jQuery, HTML &amp; CSS</td></tr>
+              <tr><th scope="row">Mobile &amp; games</th><td>React Native / Expo, Capacitor, Phaser, Three.js</td></tr>
+              <tr><th scope="row">Delivery</th><td>Vitest, manual QA, Docker, Git, GitHub Actions, Cloudflare Pages, EAS</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section class="section" id="about">
       <div class="container about">
-        <div class="about__art reveal">
-          <div class="portrait"><img src="/images/louie.webp" alt="Portrait of Louie Jay Ceniza" width="297" height="378" loading="lazy" /></div>
-          <div class="about__sticker">Made in the Philippines <svg class="flag" viewBox="0 0 6 3" aria-hidden="true"><path fill="#0038A8" d="M0 0h6v1.5H0z"/><path fill="#CE1126" d="M0 1.5h6V3H0z"/><path fill="#fff" d="M0 0l2.6 1.5L0 3z"/><circle cx=".85" cy="1.5" r=".32" fill="#FCD116"/></svg></div>
-        </div>
+        <figure class="about__photo reveal">
+          <img src="/images/louie.webp" alt="Portrait of Louie Jay Ceniza" width="297" height="378" loading="lazy" />
+          <figcaption>Cebu, Philippines <svg class="flag" viewBox="0 0 6 3" aria-hidden="true"><path fill="#0038A8" d="M0 0h6v1.5H0z"/><path fill="#CE1126" d="M0 1.5h6V3H0z"/><path fill="#fff" d="M0 0l2.6 1.5L0 3z"/><circle cx=".85" cy="1.5" r=".32" fill="#FCD116"/></svg></figcaption>
+        </figure>
         <div class="about__copy">
-          <p class="eyebrow reveal"><span>05</span> About me</p>
-          <h2 class="section__title reveal">I care about the people on the other side of the screen.</h2>
-          <div class="reveal prose">
-            <p>I’m Louie Jay, a web developer at <strong>Forty Degrees Celsius, Inc.</strong> in Cebu, where I work on NativeCamp. Outside work I build my own games and apps — useful, warm and genuinely local, like a lunch-ordering app for a neighbourhood kitchen or a cozy game about island life with Lola.</p>
-            <p>I love the whole journey: shaping a fuzzy idea, choosing the right tools, sweating the small interactions and getting it into people’s hands. I write things down, explain trade-offs plainly and finish what I start.</p>
+          <p class="label reveal"><span>05</span> About</p>
+          <h2 class="section__title reveal">Steady, careful and <em>end to end</em></h2>
+          <div class="prose reveal">
+            <p>I’m Louie Jay, a web developer at <strong>Forty Degrees Celsius, Inc.</strong> in Cebu, where I work on NativeCamp. I started in QA, and it still shapes how I build: I read the spec closely, test the edges and leave clear notes for the next person.</p>
+            <p>Outside work I build my own products — a lunch-ordering platform for a neighbourhood kitchen, a realtime listening app and games for the web and Android. Owning them from idea to production has taught me to weigh trade-offs, write things down and finish what I start.</p>
           </div>
-
-          <div class="experience" id="experience">
-          <h3 class="about__sub reveal">Experience</h3>
-          <ol class="timeline reveal">
-            <li>
-              <span class="timeline__when">2024 — now</span>
-              <div>
-                <strong>Web Developer · <a href="https://fdc-inc.com" target="_blank" rel="noopener">Forty Degrees Celsius, Inc.</a></strong>
-                <p class="timeline__org">Cebu IT Park · the engineering team behind <a href="https://nativecamp.net" target="_blank" rel="noopener">NativeCamp</a>, one of Japan’s largest online English conversation schools</p>
-                <p>I build and maintain the web front end that learners use every day — modernising legacy pages onto a newer stack and keeping them pixel-matched with production on desktop and mobile.</p>
-                <ul class="chips chips--soft timeline__stack" aria-label="Stack at FDCI">
-                  <li>PHP 8</li><li>CakePHP</li><li>MySQL</li><li>Vue.js</li><li>jQuery</li><li>Tailwind CSS</li><li>Laravel</li><li>Next.js</li><li>TypeScript</li><li>Docker</li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <span class="timeline__when">Feb — Jul 2024</span>
-              <div>
-                <strong>Web Developer / QA Intern · <a href="https://blendit.eu" target="_blank" rel="noopener">Blenditoro Corp.</a></strong>
-                <p class="timeline__org">Philippine team of <a href="https://blendit.eu" target="_blank" rel="noopener">BlendIT</a>, an Estonian software company (Tallinn · Bohol · Cebu) delivering web, mobile and UX projects for clients with human-led, AI-assisted development</p>
-                <p>Tested client web apps end to end — checking new features, finding bugs and verifying UI/UX against specs — and documented issues for the developers. Explored the stacks BlendIT delivers in, and built my main project on a headless Laravel + Vue.js architecture:</p>
-                <div class="mini-project">
-                  <p class="mini-project__title">Drive — a Google Drive–style cloud storage app</p>
-                  <p>Nested folders, drag-in file and whole-folder uploads with progress, search, favourites, trash with restore, sharing with other users by email, and one-click zip downloads of any selection.</p>
-                  <ul class="chips chips--soft" aria-label="Drive stack">
-                    <li>Laravel 11</li><li>Vue 3</li><li>Inertia.js</li><li>Tailwind CSS</li><li>MySQL</li><li>Docker</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <!-- Add earlier roles here, newest first:
-            <li>
-              <span class="timeline__when">2023 — 2026</span>
-              <div>
-                <strong>Role · Company</strong>
-                <p>One line about what you did and the impact it had.</p>
-              </div>
-            </li>
-            -->
-          </ol>
-
-          <h3 class="about__sub reveal">Education</h3>
-          <ol class="timeline reveal">
-            <li>
-              <span class="timeline__when">2020 — 2024</span>
-              <div>
-                <strong>BS Information Technology · Cebu Technological University</strong>
-                <p class="timeline__org">Cebu City, Philippines</p>
-              </div>
-            </li>
-          </ol>
-          </div>
-
-          <ul class="facts reveal">
-            <li><span>Based in</span>Cebu, Philippines · GMT+8</li>
-            <li><span>Works</span>Remote, worldwide</li>
-            <li><span>Speaks</span>English · Filipino</li>
-            <li><span>Now building</span>Isla Lola for Google Play</li>
-          </ul>
+          <dl class="facts reveal">
+            <div><dt>Based in</dt><dd>Cebu, Philippines · GMT+8</dd></div>
+            <div><dt>Works</dt><dd>Remote, worldwide</dd></div>
+            <div><dt>Speaks</dt><dd>English · Filipino</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="contact__card reveal">
-          <div class="contact__intro">
-            <p class="eyebrow eyebrow--light"><span>06</span> Contact</p>
-            <h2 class="contact__title">Have a project in mind?<br /><em>Let’s build it.</em></h2>
-            <p>Tell me a little about it and I’ll get back to you with next steps.</p>
-            <div class="contact__direct">
-              <a class="contact__email" href="mailto:louiejayceniza15@gmail.com" data-email>louiejayceniza15@gmail.com</a>
-              <button class="btn btn--light btn--sm" type="button" data-copy="louiejayceniza15@gmail.com">Copy email</button>
-            </div>
-            <ul class="expect">
-              <li><span>1</span>A reply with questions and a rough plan</li>
-              <li><span>2</span>A clear scope, timeline and quote</li>
-              <li><span>3</span>Working previews you can click, every week</li>
-            </ul>
-            <ul class="socials">
-              <li><a href="/Louie-Jay-Ceniza-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
-              <li><a href="https://github.com/imortal2001" target="_blank" rel="noopener">GitHub ↗</a></li>
-              <li><a href="https://www.linkedin.com/in/louie-jay-ceniza-7925952b1/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-            </ul>
+    <section class="section section--alt contact" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__intro reveal">
+          <p class="label"><span>06</span> Contact</p>
+          <h2 class="section__title">Let’s work together</h2>
+          <p class="section__lede">Open to freelance projects and full-time roles. Tell me about the problem and I’ll reply with questions and a rough plan.</p>
+          <div class="contact__direct">
+            <a class="contact__email" href="mailto:louiejayceniza15@gmail.com" data-email>louiejayceniza15@gmail.com</a>
+            <button class="btn btn--ghost btn--sm" type="button" data-copy="louiejayceniza15@gmail.com">Copy email</button>
           </div>
-          <form class="form" data-contact-form novalidate>
-            <div class="field">
-              <label for="f-name">Your name</label>
-              <input id="f-name" name="name" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="f-email">Email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required />
-            </div>
-            <fieldset class="field">
-              <legend>What do you need?</legend>
-              <div class="pills">
-                <label><input type="radio" name="type" value="Web app" checked /><span>Web app</span></label>
-                <label><input type="radio" name="type" value="Mobile app" /><span>Mobile app</span></label>
-                <label><input type="radio" name="type" value="Game" /><span>Game</span></label>
-                <label><input type="radio" name="type" value="Full-time role" /><span>Full-time role</span></label>
-              </div>
-            </fieldset>
-            <div class="field">
-              <label for="f-msg">About the project</label>
-              <textarea id="f-msg" name="message" rows="4" required placeholder="Goals, timeline, budget — anything helps."></textarea>
-            </div>
-            <p class="form__error" role="alert" hidden></p>
-            <button class="btn btn--primary btn--lg btn--block" type="submit">Send message <span aria-hidden="true">→</span></button>
-            <p class="form__note">Opens your email app with the message ready to send.</p>
-          </form>
+          <ul class="socials">
+            <li><a href="/Louie-Jay-Ceniza-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF) ↗</a></li>
+            <li><a href="https://github.com/imortal2001" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/louie-jay-ceniza-7925952b1/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          </ul>
         </div>
+        <form class="form reveal" data-contact-form novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <fieldset class="field">
+            <legend>What is it about?</legend>
+            <div class="pills">
+              <label><input type="radio" name="type" value="Full-time role" checked /><span>Full-time role</span></label>
+              <label><input type="radio" name="type" value="Web app" /><span>Web app</span></label>
+              <label><input type="radio" name="type" value="Mobile app" /><span>Mobile app</span></label>
+              <label><input type="radio" name="type" value="Something else" /><span>Something else</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="4" required placeholder="Context, goals and timeline — anything helps."></textarea>
+          </div>
+          <p class="form__error" role="alert" hidden></p>
+          <button class="btn btn--primary btn--block" type="submit">Send message <span aria-hidden="true">→</span></button>
+          <p class="form__note">Opens your email app with the message ready to send.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -514,7 +420,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p>© <span data-year>2026</span> Louie Jay Ceniza</p>
-      <p class="footer__made">Designed &amp; built by hand. No templates.</p>
+      <p>Built by hand with HTML, CSS and a little JavaScript.</p>
     </div>
   </footer>
 

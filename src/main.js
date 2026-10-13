@@ -1,7 +1,6 @@
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 /* ---------- Theme ---------- */
 const root = document.documentElement;
@@ -38,7 +37,7 @@ requestAnimationFrame(onScroll);
 
 // Highlight the nav link for the last section whose top has passed the middle of the screen.
 const navLinks = $$('.nav__links a, .mobile-menu a:not(.btn)');
-const navTargets = ['work', 'skills', 'solved', 'process', 'about', 'experience', 'contact']
+const navTargets = ['experience', 'work', 'decisions', 'skills', 'about', 'contact']
   .map((id) => document.getElementById(id)).filter(Boolean);
 let navRaf = 0;
 function updateCurrent() {
@@ -64,23 +63,6 @@ menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
 matchMedia('(min-width: 1081px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
-/* ---------- Word rotator ---------- */
-const rotator = $('[data-rotator]');
-if (rotator && !reduceMotion) {
-  const words = $$('.rotator__word', rotator);
-  let i = 0;
-  setInterval(() => {
-    if (document.hidden) return;
-    const cur = words[i];
-    i = (i + 1) % words.length;
-    cur.classList.remove('is-on');
-    cur.classList.add('is-out');
-    words[i].classList.remove('is-out');
-    words[i].classList.add('is-on');
-    setTimeout(() => cur.classList.remove('is-out'), 650);
-  }, 2400);
-}
-
 /* ---------- Reveal on scroll (staggered within groups) ---------- */
 const revealObserver = new IntersectionObserver((entries) => {
   for (const e of entries) {
@@ -92,81 +74,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 $$('.reveal').forEach((el) => {
   const siblings = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
   const idx = siblings.indexOf(el);
-  if (siblings.length > 2) el.style.setProperty('--d', `${Math.min(idx, 5) * 0.08}s`);
+  if (siblings.length > 2) el.style.setProperty('--d', `${Math.min(idx, 5) * 0.06}s`);
   revealObserver.observe(el);
 });
-
-/* ---------- Count-up stats ---------- */
-const countObserver = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (!e.isIntersecting) continue;
-    countObserver.unobserve(e.target);
-    const end = Number(e.target.dataset.count);
-    if (reduceMotion) continue;
-    const start = performance.now();
-    const dur = 1200;
-    const tick = (t) => {
-      const p = Math.min(1, (t - start) / dur);
-      e.target.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    e.target.textContent = '0';
-    requestAnimationFrame(tick);
-  }
-}, { threshold: 0.6 });
-$$('[data-count]').forEach((el) => countObserver.observe(el));
-
-/* ---------- Hero parallax ---------- */
-const stage = $('[data-parallax]');
-if (stage && finePointer && !reduceMotion) {
-  const layers = $$('[data-depth]', stage);
-  let raf = 0;
-  let tx = 0, ty = 0;
-  addEventListener('pointermove', (e) => {
-    tx = (e.clientX / innerWidth - 0.5) * 2;
-    ty = (e.clientY / innerHeight - 0.5) * 2;
-    if (!raf) raf = requestAnimationFrame(apply);
-  });
-  function apply() {
-    raf = 0;
-    for (const l of layers) {
-      const d = Number(l.dataset.depth);
-      l.style.translate = `${(-tx * d * 10).toFixed(1)}px ${(-ty * d * 8).toFixed(1)}px`;
-    }
-  }
-}
-
-/* ---------- Magnetic buttons ---------- */
-if (finePointer && !reduceMotion) {
-  $$('.magnetic').forEach((btn) => {
-    btn.addEventListener('pointermove', (e) => {
-      const r = btn.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width / 2;
-      const y = e.clientY - r.top - r.height / 2;
-      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.3}px)`;
-    });
-    btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
-  });
-}
-
-/* ---------- Project filters ---------- */
-const filters = $$('[data-filter]');
-const projects = $$('.project');
-filters.forEach((btn) => btn.addEventListener('click', () => {
-  const kind = btn.dataset.filter;
-  filters.forEach((b) => {
-    const on = b === btn;
-    b.classList.toggle('is-active', on);
-    b.setAttribute('aria-pressed', String(on));
-  });
-  projects.forEach((p) => {
-    const show = kind === 'all' || p.dataset.kind === kind;
-    p.classList.toggle('is-hidden', !show);
-    if (show && !reduceMotion) {
-      p.animate([{ opacity: 0, transform: 'translateY(24px)' }, { opacity: 1, transform: 'none' }], { duration: 500, easing: 'cubic-bezier(.2,.7,.2,1)' });
-    }
-  });
-}));
 
 /* ---------- Case study dialog ---------- */
 const caseDialog = $('[data-case-dialog]');
