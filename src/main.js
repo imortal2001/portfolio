@@ -38,7 +38,7 @@ requestAnimationFrame(onScroll);
 
 // Highlight the nav link for the last section whose top has passed the middle of the screen.
 const navLinks = $$('.nav__links a, .mobile-menu a:not(.btn)');
-const navTargets = ['work', 'skills', 'solved', 'process', 'about', 'experience', 'contact']
+const navTargets = ['work', 'skills', 'solved', 'about', 'experience', 'contact']
   .map((id) => document.getElementById(id)).filter(Boolean);
 let navRaf = 0;
 function updateCurrent() {
@@ -64,23 +64,6 @@ menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false
 addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
 matchMedia('(min-width: 1081px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
-/* ---------- Word rotator ---------- */
-const rotator = $('[data-rotator]');
-if (rotator && !reduceMotion) {
-  const words = $$('.rotator__word', rotator);
-  let i = 0;
-  setInterval(() => {
-    if (document.hidden) return;
-    const cur = words[i];
-    i = (i + 1) % words.length;
-    cur.classList.remove('is-on');
-    cur.classList.add('is-out');
-    words[i].classList.remove('is-out');
-    words[i].classList.add('is-on');
-    setTimeout(() => cur.classList.remove('is-out'), 650);
-  }, 2400);
-}
-
 /* ---------- Reveal on scroll (staggered within groups) ---------- */
 const revealObserver = new IntersectionObserver((entries) => {
   for (const e of entries) {
@@ -95,26 +78,6 @@ $$('.reveal').forEach((el) => {
   if (siblings.length > 2) el.style.setProperty('--d', `${Math.min(idx, 5) * 0.08}s`);
   revealObserver.observe(el);
 });
-
-/* ---------- Count-up stats ---------- */
-const countObserver = new IntersectionObserver((entries) => {
-  for (const e of entries) {
-    if (!e.isIntersecting) continue;
-    countObserver.unobserve(e.target);
-    const end = Number(e.target.dataset.count);
-    if (reduceMotion) continue;
-    const start = performance.now();
-    const dur = 1200;
-    const tick = (t) => {
-      const p = Math.min(1, (t - start) / dur);
-      e.target.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    e.target.textContent = '0';
-    requestAnimationFrame(tick);
-  }
-}, { threshold: 0.6 });
-$$('[data-count]').forEach((el) => countObserver.observe(el));
 
 /* ---------- Hero parallax ---------- */
 const stage = $('[data-parallax]');

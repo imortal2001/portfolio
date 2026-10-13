@@ -21,8 +21,8 @@ const html = `<!doctype html><html><head>
   <div class="glow"></div>
   <div class="copy">
     <span class="mark">LJ</span>
-    <h1>I build apps &amp; games people <em>love</em> to use.</h1>
-    <p>Louie Jay · Full-stack developer</p>
+    <h1>I build web apps, mobile apps and games.</h1>
+    <p>Louie Jay Ceniza · Web Developer</p>
   </div>
   <div class="phone a"><img src="${img('isla-farm.webp')}"></div>
   <div class="phone b"><img src="${img('kusina-menu.webp')}"></div>
