@@ -193,6 +193,21 @@ p { margin: 0; }
   :root:not([data-theme="light"]) .i-moon { display: block; }
 }
 .nav__burger { display: none; position: relative; }
+.icon-btn--brand svg { fill: currentColor; stroke: none; }
+.nav__resume { gap: 6px; }
+.nav__resume svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 520px) {
+  .nav__actions { gap: 8px; }
+  /* Icon-only on phones; the label stays available to screen readers */
+  .nav__resume { width: 42px; height: 42px; padding: 0; }
+  .nav__resume-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .nav__resume svg { width: 19px; height: 19px; }
+}
+@media (max-width: 380px) {
+  .nav__actions { gap: 6px; }
+  .nav__actions .icon-btn, .nav__resume { width: 38px; height: 38px; }
+}
+@media (max-width: 350px) { .brand__name { display: none; } }
 .nav__burger span { position: absolute; left: 12px; right: 12px; height: 1.8px; background: currentColor; border-radius: 2px; transition: transform .3s var(--ease), top .3s var(--ease); }
 .nav__burger span:first-child { top: 16px; }
 .nav__burger span:last-child { top: 23px; }
