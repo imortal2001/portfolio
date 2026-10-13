@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Louie Jay — portfolio site",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "capture": "node scripts/capture.mjs",
+    "images": "sh scripts/images.sh",
+    "og": "node scripts/og.mjs",
+    "deploy": "vite build && wrangler pages deploy dist --project-name louiejay --branch main --commit-dirty=true"
+  },
+  "type": "module",
+  "devDependencies": {
+    "playwright": "1.56",
+    "vite": "^6.4.4",
+    "wrangler": "^4.149.0"
+  },
+  "private": true
+}
