@@ -6,7 +6,7 @@ const finePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
 /* ---------- Theme ---------- */
 const root = document.documentElement;
 function currentTheme() {
-  return root.dataset.theme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  return root.dataset.theme === 'dark' ? 'dark' : 'light'; // light unless the visitor chose dark
 }
 const themeBtn = $('[data-theme-toggle]');
 // Tooltip and label describe what a click will do.
@@ -21,7 +21,6 @@ themeBtn.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch {}
   labelThemeButton();
 });
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', labelThemeButton);
 labelThemeButton();
 
 /* ---------- Nav: scrolled state, progress bar, current section ---------- */
