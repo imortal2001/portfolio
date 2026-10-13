@@ -194,6 +194,25 @@ p { margin: 0; }
 }
 .nav__burger { display: none; position: relative; }
 .icon-btn--brand svg { fill: currentColor; stroke: none; }
+/* Tooltips for header buttons (hover / keyboard focus; touch screens skip them) */
+[data-tip] { position: relative; }
+.icon-btn[data-tip]:hover { transform: none; } /* the tilt would rotate the tooltip too */
+@media (hover: hover) {
+  [data-tip]::after {
+    content: attr(data-tip); position: absolute; top: calc(100% + 10px); left: 50%; z-index: 70;
+    padding: 6px 10px; border-radius: 8px; background: var(--ink); color: var(--bg);
+    font-family: var(--font-body); font-size: .78rem; font-weight: 600; line-height: 1.2; white-space: nowrap;
+    box-shadow: var(--shadow-sm); pointer-events: none;
+    opacity: 0; transform: translate(-50%, -4px); transition: opacity .18s ease, transform .18s var(--ease);
+  }
+  [data-tip]::before {
+    content: ""; position: absolute; top: calc(100% + 5px); left: 50%; z-index: 70; width: 10px; height: 10px;
+    background: var(--ink); transform: translate(-50%, -4px) rotate(45deg); border-radius: 2px; pointer-events: none;
+    opacity: 0; transition: opacity .18s ease, transform .18s var(--ease);
+  }
+  [data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); transition-delay: .25s; }
+  [data-tip]:hover::before, [data-tip]:focus-visible::before { opacity: 1; transform: translate(-50%, 0) rotate(45deg); transition-delay: .25s; }
+}
 .nav__resume { gap: 6px; }
 .nav__resume svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 @media (max-width: 520px) {
@@ -245,8 +264,6 @@ p { margin: 0; }
 .hero__lede { max-width: 34em; font-size: clamp(1.05rem, 1.4vw, 1.2rem); color: var(--ink-2); }
 .hero__lede strong { color: var(--ink); }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-.hero__cv { align-self: center; margin-left: 8px; color: var(--ink-2); }
-@media (max-width: 520px) { .hero__cv { margin: 6px 0 0 4px; flex-basis: 100%; } }
 
 .stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; margin: 44px 0 0; }
 .stats > div { padding: 0 28px; border-left: 1px solid var(--line); }
