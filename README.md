@@ -36,10 +36,13 @@ Screenshots live in `public/images/` as WebP.
 
 ## Deploy
 
-Live at **https://louiejay.pages.dev** (Cloudflare Pages project `louiejay`, same account as Isla Lola). To publish changes:
+Live at **https://louiejay.pages.dev** (Cloudflare Pages project `louiejay`, same account as Isla Lola).
 
-```bash
-npm run deploy
-```
+**Automatic:** every push to `main` deploys via GitHub Actions (`.github/workflows/deploy.yml`). It needs two things on the GitHub repo:
+
+- Variable `CLOUDFLARE_ACCOUNT_ID` (already set).
+- Secret `CLOUDFLARE_API_TOKEN`: create a token at https://dash.cloudflare.com/profile/api-tokens → *Create Custom Token* with permission **Account → Cloudflare Pages → Edit**, then run `gh secret set CLOUDFLARE_API_TOKEN --repo imortal2001/portfolio` and paste it.
+
+**Manual:** `npm run deploy` still works from your machine.
 
 If you move to a custom domain, update the `og:url`, `og:image` and `canonical` URLs at the top of `index.html`.
