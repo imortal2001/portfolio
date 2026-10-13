@@ -21,10 +21,10 @@ jobs:
         if: env.HAS_TOKEN != 'true'
         run: echo "::notice::Add the CLOUDFLARE_API_TOKEN repo secret to enable deploys (see README → Deploy)."
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: env.HAS_TOKEN == 'true'
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: env.HAS_TOKEN == 'true'
         with:
           node-version: 22
